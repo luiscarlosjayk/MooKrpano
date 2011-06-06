@@ -44,7 +44,7 @@ How to use
 	</html>
 	
 	Do not forget that swfkrpano.js, Class.SubObjectMapping.js and Pano.js
-	are the minimum script files you would include to create a 360° krpano tour.
+	are the minimum script files you would include to create a 360 krpano tour.
 	After that you could include only those scripts that you will need for your application.
 	
 	Also note that there's a Pano.PluginHotspotCommons.js file, which is the base for rest of classes,
