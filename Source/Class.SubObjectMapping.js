@@ -12,8 +12,6 @@ authors:
 
 requires: [Core/Class, Core/Object]
 
-provides: [SubObjectMapping]
-
 ...
 */
 
