@@ -89,7 +89,7 @@ How to create other stuff
 Why bothering using MooKrpano
 -----------------------------
 
-	360° content has many many uses, and I'm now the one who says it.
+	360 content has many many uses, and I'm now the one who says it.
 	For a good example see google's streetview service, it is just great.
 	Now, Krpano as it is, might be used i really cool sticky cloud applications
 	which might require dynamic content to be created. By extending Krpano javascript interface
