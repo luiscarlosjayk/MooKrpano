@@ -43,6 +43,11 @@ Pano.Hotspot = new Class({
 	
 	/*------------------------- HOTSPOT CUSTOM METHODS -------------------------*/
 	
+	remove: function() {
+		this.$pano.removehotspot(this.options.name);
+		delete this.$pano.hotspots[this.options.name];
+		delete(this);
+	}
 	
 });
 

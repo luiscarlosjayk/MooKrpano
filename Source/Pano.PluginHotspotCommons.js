@@ -82,7 +82,7 @@ Pano.PluginHotspotCommons = new Class({
 		return this.get('pressed');
 	},
 	
-	getHovering: function() {
+	gethovering: function() {
 		return this.get('hovering');
 	},
 	
@@ -100,7 +100,7 @@ Pano.PluginHotspotCommons = new Class({
 		}
 	},
 	
-	toggleEnabled: function() {
+	toggleenabled: function() {
 		if(this.get('enabled')) {
 			this.set('enabled', 0);
 		}

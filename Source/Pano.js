@@ -68,7 +68,7 @@ Pano = new Class({
 			'add', 'sub', 'mul', 'div', 'mod', 'pow', 'inc', 'dec', 'roundval', 'txtadd', 'tween', 'stoptween', 
 			'loadpano', 'loadscene', 'loadxml', 'reloadpano', 'openurl', 'lookat', 'lookto', 'looktohotspot', 
 			'moveto', 'zoomto', 'adjusthlookat', 'wait', 'freezeview', 'oninterrupt', 'screentosphere', 'spheretoscreen', 
-			'showtext', 'updateobject', 'updatescreen', 'invalidatescreen', 'addplugin', 'removeplugin', 'addhotspot', 'removehotspots', 
+			'showtext', 'updateobject', 'updatescreen', 'invalidatescreen', 'addplugin', 'removeplugin', 'addhotspot', 'removehotspot', 
 			'addlensflare', 'removelensflare', 'showlog', 'trace', 'error']
 		}
 	},
@@ -83,7 +83,7 @@ Pano = new Class({
 			allowScriptAccess: true
 		},
 		krpanoVars: {
-			// set krpano variables
+			// set krpano variables here
 		},
 		passQueryParameters: false
 	},

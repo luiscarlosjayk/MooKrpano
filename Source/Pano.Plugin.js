@@ -44,6 +44,12 @@ Pano.Plugin = new Class({
 	
 	changeorigin: function(align, edge) {
 		this.call('changeorigin', align, edge);
+	},
+	
+	remove: function() {
+		this.$pano.removeplugin(this.options.name);
+		delete this.$pano.plugins[this.options.name];
+		delete(this);
 	}
 	
 });
