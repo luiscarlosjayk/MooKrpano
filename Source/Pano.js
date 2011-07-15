@@ -114,7 +114,6 @@ Pano = new Class({
 		
 		Object.each(this.options.viewerParams, function(paramValue, paramName) {
 			this.$viewer.addParam(paramName, paramValue);
-			console.log(paramName);
 		}, this);
 		
 		if(this.options.passQueryParameters === true) {this.$viewer.passQueryParameters();}
