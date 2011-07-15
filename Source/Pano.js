@@ -67,7 +67,7 @@ Pano = new Class({
 			subFunctions: ['copy', 'action', 'delayedcall', 'switch', 'push', 'pop', 'stopall', 'breakall', 
 			'add', 'sub', 'mul', 'div', 'mod', 'pow', 'inc', 'dec', 'roundval', 'txtadd', 'tween', 'stoptween', 
 			'loadpano', 'loadscene', 'loadxml', 'reloadpano', 'openurl', 'lookat', 'lookto', 'looktohotspot', 
-			'moveto', 'zoomto', 'adjusthlookat', 'wait', 'freezeview', 'oninterrupt', 'screentosphere', 'spheretoscreen', 
+			'moveto', 'zoomto', 'adjusthlookat', 'wait', 'freezeview', 'oninterrupt', /*'screentosphere', 'spheretoscreen', */
 			'showtext', 'updateobject', 'updatescreen', 'invalidatescreen', 'addplugin', 'removeplugin', 'addhotspot', 'removehotspot', 
 			'addlensflare', 'removelensflare', 'showlog', 'trace', 'error']
 		}
@@ -338,6 +338,32 @@ Pano = new Class({
 	
 	gethotspotcount: function() {
 		return this.get('hotspot.count');
+	},
+	
+	/**
+	 *screentosphere and spheretoscreen Krpano native actions returns undefined
+	 * because of this. Workaround: these actions are rewritten manually using by setting and getting krpano vars.
+	 */
+	screentosphere: function(x,y) {
+		this.set('mookrpano_x', x);
+		this.set('mookrpano_y', y);
+		var stp = this.call('screentosphere(mookrpano_x, mookrpano_y, mookrpano_ath, mookrpano_atv)');
+		var screentosphereObj = {
+			ath: this.get('mookrpano_ath'),
+			atv: this.get('mookrpano_atv')
+		};
+		return screentosphereObj;
+	},
+	
+	spheretoscreen: function(h,v) {
+		this.set('mookrpano_ath', h);
+		this.set('mookrpano_atv', v);
+		var pts = this.call('spheretoscreen(mookrpano_ath, mookrpano_atv, mookrpano_x, mookrpano_y)');
+		var screentosphereObj = {
+			x: this.get('mookrpano_x'),
+			y: this.get('mookrpano_y')
+		};
+		return screentosphereObj;
 	},
 	
 	/*--------------- SETTERS ---------------*/
